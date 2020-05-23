@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "tag": {
+      "type": "string",
+      "unique": true
+    },
+    "streamsessions": {
+      "via": "category",
+      "collection": "streamsession",
+      "dominant": true
+    }
+  }
+}

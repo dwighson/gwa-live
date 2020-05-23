@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/streamsessions",
+      "handler": "streamsession.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/streamsessions/count",
+      "handler": "streamsession.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/streamsessions/:id",
+      "handler": "streamsession.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/streamsessions",
+      "handler": "streamsession.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/streamsessions/:id",
+      "handler": "streamsession.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/streamsessions/:id",
+      "handler": "streamsession.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "streamsessions",
+  "info": {
+    "name": "streamsession"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "category": {
+      "collection": "category",
+      "via": "streamsessions"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "streamsession"
+    },
+    "youtube": {
+      "type": "string"
+    }
+  }
+}
